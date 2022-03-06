@@ -22,6 +22,9 @@ class TestPage extends StatelessWidget {
               },
               child: Text('GET Data', style: TextStyle(fontSize: 24)),
             ),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               onPressed: () async {
                 controller.postData();

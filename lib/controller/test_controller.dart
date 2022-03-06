@@ -7,21 +7,8 @@ import 'package:http_client/helper/dialog_helper.dart';
 import 'package:http_client/services/app_exceptions.dart';
 import 'package:http_client/services/base_client.dart';
 
-class TestController extends GetxController with BaseController {
+class TestController extends BaseController {
   var lst = [].obs;
-
-  // void getData() async {
-  //   showLoading('Fetching data');
-  //   var response = await BaseClient()
-  //       .get('https://jsonplaceholder.typicode.com', '/todos/1');
-
-  //   print(response);
-
-  //   if (response == null) return;
-  //   hideLoading();
-
-  //   //lst.value = testFromJson(response);
-  // }
 
   void getData() async {
     showLoading('Fetching data');

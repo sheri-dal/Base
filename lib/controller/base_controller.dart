@@ -1,7 +1,8 @@
+import 'package:get/state_manager.dart';
 import 'package:http_client/helper/dialog_helper.dart';
 import 'package:http_client/services/app_exceptions.dart';
 
-class BaseController {
+class BaseController extends GetxController {
   void handleError(error) {
     hideLoading();
     if (error is BadRequestException) {
