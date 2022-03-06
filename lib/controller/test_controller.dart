@@ -36,10 +36,10 @@ class TestController extends GetxController with BaseController {
   }
 
   void postData() async {
-    var request = {'message': ' Testing'};
+    var Body = {'message': ' Testing'};
     showLoading('Posting data...');
     var response = await BaseClient()
-        .post('https://jsonplaceholder.typicode.com', '/posts', request)
+        .post('https://jsonplaceholder.typicode.com', '/posts', Body)
         .catchError((error) {
       if (error is BadRequestException) {
         var apiError = json.decode(error.message!);
